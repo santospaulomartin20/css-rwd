@@ -1,0 +1,312 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+div	{
+	display:inline-block;
+}
+.fcon {
+	background-color: grey;
+	height: 100%;
+	width: 200px;
+	position: fixed;
+}
+main{
+	padding-left: 200px;
+}
+.home {
+	background-color: skyblue;
+	min-height: 500px;
+	position: relative;
+}
+.about {
+	background-color: orange;
+	min-height: 300px;
+}
+.services {
+	background-color: blue;
+	min-height: 300px;
+}
+.projects {
+	background-color: red;
+	min-height: 300px;
+}
+.gallery {
+	background-color: gold;
+	min-height: 300px;
+}
+footer {
+	background-color: green;
+	min-height: 50px;
+}
+.avatar {
+	background-color: white;
+	height: 150px;
+	width: 150px;
+}
+.fcon,
+.home,
+.about,
+.services,
+.projects,
+.gallery,
+footer,
+.avatar {
+	padding: 25px;
+}
+ul > li {
+	display: block;
+	margin-top: 10px;
+	line-height: 40px;
+	list-style: none;
+	width: 150px;
+	background-color: skyblue;
+}
+li a {
+	text-decoration: none;
+}
+nav {
+	text-align: center;
+	font-size: 12px
+}
+.box1 {
+	text-align: center;
+	border: 5px solid white;
+	width: 40%;
+	padding: 40px;
+	position: absolute;
+	top : 50%; 
+	left: 50%;
+	transform: translate(-50%, -50%); /*center*/
+}
+.column {
+	padding: 15px;	
+	border: 1px solid black;	
+	margin: 10px;
+	width: 31%;
+	display: inline-block;
+}
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+img[alt*=Service] {
+	border: 1px solid white;
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-right: 10px;
+}
+img[alt*="Services"] ~ h3 {
+	margin-bottom: 10px;
+}
+img[alt*=Service] ~ p {
+	overflow: hidden; /*because of float above*/
+}
+.gallery > .column {
+	width: 22%;
+	margin: 0 1%;
+	border-color: black;
+}
+img[alt*=Gallery] {
+	border: 1px solid black;
+	width: 100%;
+	height: 100px;
+	display: block;
+}
+img[alt*=Social] {
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+.contact {
+	float: right;
+}
+
+/*general rules*/
+/*.page,
+.section {
+	width: 100%;
+}
+.section {
+	height: 100px;
+}
+.fcon {
+	background-color: grey;
+	height: 100%;
+}
+.home {
+	background-color: skyblue;
+}
+.about {
+	background-color: orange;
+}
+.services {
+	background-color: blue;
+}
+.project {
+	background-color: red;
+}
+.gallery {
+	background-color: gold;
+}
+footer {
+	background-color: green;
+}*/
+/*mobile*/
+@media only screen and (max-width: 400px) {
+	.fcon {
+		position: static;
+		height: 100%;
+		width: 100%;
+	}
+	.avatar {
+		display: block;
+		width: 150px;
+		height: 150px;
+		margin: 0 auto;
+	}
+	.fcon nav ul {
+		display: inline-block;
+		margin: 0 auto;
+	}
+	.box1 {
+		width: 200px;
+	}
+	main {
+		padding: 0;
+	}
+	.home {
+		height: 100%;
+
+	}
+	.about {
+		height: 100%;
+	}
+	.services {
+		min-height: 100%;
+		float: left;
+	}
+	.column {
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	.project {
+		height: 100%;
+		text-align: justify;
+	}
+	.gallery {
+		height: 100%;
+
+	}
+	.gallery > .column {
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		margin-bottom: 10px;
+	}
+	.contact {
+		transform: translate(-60%,0%);
+	}
+	footer {
+		padding:10px;
+		display: inline-block;
+		text-align: center;
+	}
+	
+}
+/*tablet*/
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+	.fcon {
+		/*z-index: 1;*/
+		width: 200px;
+	}
+	.avatar {
+		display: block;
+		width: 150px;
+		height: 150px;
+		margin: 0 auto;
+	}
+	.fcon nav ul {
+		display: inline-block;
+		margin: 0 auto;
+	}
+	.fcon nav ul li {
+		display: inline-block;
+	}
+	.box1 {
+		width: 200px;
+	}
+	main {
+		margin-left: 200px;
+		display: block;
+		float: right;
+		padding: 0;
+
+	}
+	.home {
+		/*z-index: -1;*/
+		height: 100%;
+
+	}
+	.about {
+		height: 100%;
+	}
+	.services {
+		min-height: 100%;
+		float: left;
+	}
+	.services > .column {
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	.project {
+		height: 100%;
+		text-align: justify;
+	}
+	.gallery {
+		text-align: center;
+		height: 100%;
+
+	}
+	.gallery > h1 {
+		text-align: justify;
+	}
+	.gallery > .column {
+		height: 100%;
+		width: 45%;
+		padding: 0;
+		margin: 0 auto;
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+	.contact {
+		transform: translate(-60%,0%);
+	}
+	footer {
+		padding:10px;
+		display: inline-block;
+		text-align: center;
+	}
+	
+}
+}
+/*laptop/desktop*/
+@media only screen and (min-width: 961px) {
+
+	.services > .column {
+		width: 31%
+	}
+
+
+}
