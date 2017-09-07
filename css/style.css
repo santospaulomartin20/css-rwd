@@ -7,6 +7,7 @@ div	{
 	display:inline-block;
 }
 .fcon {
+	z-index: 1;
 	background-color: grey;
 	height: 100%;
 	width: 200px;
@@ -83,7 +84,7 @@ nav {
 .column {
 	padding: 15px;	
 	border: 1px solid black;	
-	margin: 10px;
+	margin: 6px;
 	width: 31%;
 	display: inline-block;
 }
@@ -226,7 +227,7 @@ footer {
 /*tablet*/
 @media only screen and (min-width: 401px) and (max-width: 960px) {
 	.fcon {
-		/*z-index: 1;*/
+		z-index: 1;
 		width: 200px;
 	}
 	.avatar {
@@ -246,6 +247,7 @@ footer {
 		width: 200px;
 	}
 	main {
+		z-index: -1;
 		margin-left: 200px;
 		display: block;
 		float: right;
@@ -253,7 +255,6 @@ footer {
 
 	}
 	.home {
-		/*z-index: -1;*/
 		height: 100%;
 
 	}
@@ -306,6 +307,9 @@ footer {
 
 	.services > .column {
 		width: 31%
+	}
+	.fcon {
+		z-index: 1;
 	}
 
 
